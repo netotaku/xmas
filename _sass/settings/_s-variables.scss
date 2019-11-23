@@ -1,0 +1,55 @@
+//== Bootstrap Variables to Override
+//
+//============================================
+
+// Overrides of Bootstrap & Base theme variables
+
+$font-family-sans-serif:  "GTWalsheimProRegular", Helvetica, Arial, sans-serif;
+$font-headings:           "GTWalsheimProBold", Helvetica, Arial, sans-serif;
+
+$font-size-base:          16px;
+$unitless-font-size-base: 16;
+$unitless-line-height-base: 25;
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1;
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base));
+
+//== Relative Paths
+//
+//============================================
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1360px
+) !default;
+
+$container-max-widths: (
+  sm: 98%,
+  md: 98%,
+  lg: 98%,
+  xl: 1200px,
+  xxl: 1360px
+) !default;
+
+//== Relative Paths
+//
+//============================================
+
+
+//== Layout
+//
+//============================================
+
+$base-spacing: 60px;
+$gutter: $base-spacing / 3;
+$gutter-small: $base-spacing / 6;
+$gutter-large: $base-spacing / 2;
+
+//== Colours as vars for mixins
+//
+//============================================

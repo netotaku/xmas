@@ -1,0 +1,9 @@
+@keyframes wiggle{
+  25%{
+    transform: rotate(-20deg);
+  }
+
+  75%{
+    transform: rotate(20deg);
+  }
+}

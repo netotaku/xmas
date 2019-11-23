@@ -1,0 +1,10 @@
+@mixin psudo($position: '', $eh: 'yes'){
+	content: '';
+	display: block;
+	position: $position;
+
+	@if $eh == 'yes'{
+		top: 0;
+		bottom: 0;
+	}
+}

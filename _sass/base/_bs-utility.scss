@@ -1,0 +1,82 @@
+//== Resets
+//
+
+.reset-all,
+%reset-all{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.reset-top,
+%reset-top{
+  margin-top: 0;
+}
+
+.reset-bottom,
+%reset-bottom{
+  margin-bottom: 0;
+}
+
+.vc-absolute,
+%vc-absolute{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.vc-relative,
+%vc-relative{
+  position: relative;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.hc-absolute
+%hc-absolute{
+  right: 0;
+  left: 0;
+
+  margin: 0px auto;
+}
+
+.center-center,
+%center-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%clearfix{
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/// Full Screen Width Block
+/// Allows a block item to breakout of the restraints of it's container to go full screen width
+.full-screen-width,
+%full-screen-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+
+.collapse {
+  display: none;
+
+  &.in{
+    display: block;
+  }
+}
+
+*:focus{
+  outline: none;
+}

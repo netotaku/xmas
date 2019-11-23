@@ -1,0 +1,27 @@
+.trim {
+  display:inline-block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 19.1%;
+    background-image: url('./img/trim.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &--bottom {
+    top: auto;
+    bottom: 0;
+
+    &:before {
+      transform: scaleY(-1);
+    }
+  }
+}

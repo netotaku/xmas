@@ -1,0 +1,10 @@
+@mixin color-slides($count, $baseName, $startcolor) {
+  @for $i from 0 through $count {
+
+    $background-color: darken($startcolor, $i * $i);
+
+    &:nth-child(#{$i}) {
+      background: $background-color;
+    }
+  }
+}

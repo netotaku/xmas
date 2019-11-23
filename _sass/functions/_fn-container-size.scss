@@ -1,0 +1,7 @@
+//== Screen Size functions
+//
+
+//## containerSize() - select the size from the screenSizes
+@function containerSize($name) {
+    @return map-get($container-max-widths, $name);
+}

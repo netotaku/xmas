@@ -1,0 +1,67 @@
+//## Font Sizing
+// -------------------------
+@mixin font-size($sizeValue: $unitless-font-size-base) {
+  font-size: em($sizeValue);
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue/$unitless-font-size-base) + rem;
+}
+
+//## Line Height
+// -------------------------
+@mixin unitless-line-height($font-size, $line-height: $unitless-line-height-base) {
+  // ***** TODO: Need to work out if font is greater than line-height, if so we need to do multiples
+  line-height: $line-height / $font-size; // unitless
+}
+
+//## Typography all-in-one
+// -------------------------
+@mixin typography($font-size, $typeface, $line-height: true) {
+
+  @include font-family($typeface);
+  @include font-size($font-size);
+
+  // If we want to manually override line-height we can do so by choosing false. By default it's on
+  @if ($line-height == true) {
+    // ***** TODO: Add this back in once it's fixed
+    // @include unitless-line-height($font-size);
+  }
+}
+
+@mixin font-family($typeface) {
+  $family: '';
+  @if ($typeface == 'reg') {
+    $family: "GTWalsheimProRegular", Helvetica, Arial, sans-serif;
+  }
+  @else if ($typeface == 'bold') {
+    $family: "GTWalsheimProBold", Helvetica, Arial, sans-serif;
+  }
+
+  //@if ($family) {
+    font-family: $family;
+  //}
+}
+
+
+//## Anchors/Links
+// -------------------------
+
+//** Set all the anchor's pseudo states to have the same styling.
+@mixin link-pseudo-states {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+//** Sets the anchor's decoration then sets the pseudo states to the opposite.
+@mixin link-state($decorate: underline) {
+  text-decoration: $decorate;
+  @include link-pseudo-states {
+    @if $decorate == 'underline' {
+      text-decoration: none;
+    }
+    @else {
+      text-decoration: underline;
+    }
+  }
+}

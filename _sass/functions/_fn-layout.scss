@@ -1,0 +1,7 @@
+//== Spacing function
+//
+
+//## spacing() - return the size of spacing
+@function spacing($spacing: 'base') {
+    @return map-get($spacings, $spacing);
+}

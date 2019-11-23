@@ -1,0 +1,51 @@
+$card-padding: 30px;
+
+.card {
+  padding: $card-padding;
+  position: relative;
+  &__inner {
+    padding-top: 100%;
+    background-color: palette(brand, everSoSlightlyLighterBlue);
+    background-color: orange;
+    position: relative;
+    
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      height: 100%;
+      width: 100%;
+      background: url('./img/trim-card.svg') no-repeat center;
+      background-size: 95%;
+    }
+
+    &--front {
+      transform-origin: left;
+      /*Speed of the Door animation*/
+      transition: transform 0.5s ease-in-out;
+      z-index: 2;
+      .is-open & {
+        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+      }
+    }
+
+    &--back {
+      background-color: lightblue;
+      position: absolute;
+      padding-top: calc(100% - 60px);
+      width: calc(100% - 60px);
+      z-index: 1;
+      top: $card-padding;
+      left: $card-padding;
+      box-shadow: inset 0px 0px 14px 8px black;
+    }
+
+    &--half {
+      padding-top: 50%;
+    }
+  }
+}

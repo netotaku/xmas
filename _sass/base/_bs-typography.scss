@@ -1,0 +1,101 @@
+html {
+  font-size: $font-size-base;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @include typography(16, reg, false);
+  font-family: $font-family-sans-serif;
+  margin: 0px;
+}
+
+// .page-wrapper{
+//   overflow: hidden;
+//   position: relative;
+// }
+
+h1, h2, h3, h4, h5, h6{
+  @extend %reset-all;
+}
+
+h1, .h1 {
+}
+
+h2, .h2 {
+}
+
+h3, .h3 {
+}
+
+h4, .h4 {
+
+}
+
+h5, .h5 {
+}
+
+h6, .h6 {
+}
+
+
+//== From Bootstrap to override
+
+//
+// Typography
+// --------------------------------------------------
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-headings;
+  color: palette(default, black);
+}
+
+// h1, .h1,
+// h2, .h2,
+// h3, .h3 {
+//   margin-top: $line-height-computed;
+//   margin-bottom: ($line-height-computed / 2);
+// }
+
+// h4, .h4,
+// h5, .h5,
+// h6, .h6 {
+//   margin-top: ($line-height-computed / 2);
+//   margin-bottom: ($line-height-computed / 2);
+// }
+
+// Body text
+// -------------------------
+
+p {
+}
+
+
+// Links
+// -------------------------
+p {
+  a {
+    color: palette(default, black);
+  }
+}
+
+// Screen reader only
+// -------------------------
+.sr-only{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  display: none;
+}

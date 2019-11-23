@@ -1,0 +1,14 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .hero--small .background-image, .footer-contact__text-wrapper {
+    -ms-flex-align: center
+  }
+
+  .cs-intro__container::after, .footer-contact .footer-contact__text::after {
+    top: 1px;
+  }
+}
+
+
+.lp-iframe-container {
+  overflow: hidden;
+}

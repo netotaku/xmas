@@ -1,0 +1,8 @@
+//== Colors functions
+//
+
+//## palette() - select the color from the palette and tone of that color.
+@function palette($palette, $tone: 'base') {
+    // @return map-get(map-get($palettes, $palette), $tone);
+    @return map-deep-get($palettes, $palette, $tone);
+}
