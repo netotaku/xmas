@@ -23,27 +23,6 @@ $card-padding: 30px;
       background-size: 95%;
     }
 
-    &--front {
-      transform-origin: left;
-      /*Speed of the Door animation*/
-      transition: transform 0.5s ease-in-out;
-      z-index: 2;
-      .is-open & {
-        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
-      }
-    }
-
-    &--back {
-      background-color: lightblue;
-      position: absolute;
-      padding-top: calc(100% - 60px);
-      width: calc(100% - 60px);
-      z-index: 1;
-      top: $card-padding;
-      left: $card-padding;
-      box-shadow: inset 0px 0px 14px 8px black;
-    }
-
     &--half {
       padding-top: 50%;
     }

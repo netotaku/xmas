@@ -11,6 +11,7 @@
   <script src="./assets/js/CSSRulePlugin.min.js"></script>
   <script src="./assets/js/CustomEase.min.js"></script>
   <script src="./assets/js/EasePack.min.js"></script>
+  <script src="./assets/js/three.min.js"></script>
 </head>
 
 <body>
@@ -21,10 +22,11 @@
         <div class="logo">
             <a href="/"><img src="./assets/img/logo.svg" alt=""></a>
         </div>
+        <div id="app">
+        </div>
         <div class="row center-xs row--cards">
           <div class="col-xs-12 col-sm-6 col-md-4 card" data-card-number="1">
-            <div class="card__inner card__inner--front"></div>
-            <div class="card__inner card__inner--back"></div>
+            <div class="card__inner"></div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 card" data-card-number="2">
             <div class="card__inner"></div>
@@ -100,6 +102,19 @@
             </div>
         </div>
         <span class="trim trim--bottom"></span>
+      </div>
+    </div>
+
+    <div id='grid'>
+      <div class='item item-1'></div>
+      <div class='item item-2'></div>
+      <div class='item item-3'></div>
+      <div class='item item-4'></div>
+    </div>
+    <div id="js-scene" class="scene">
+      <div class="scene__inner scene__inner--front"></div>
+      <div class="scene__inner scene__inner--back">
+          <div class='item item-1'></div>
       </div>
     </div>
   </main>

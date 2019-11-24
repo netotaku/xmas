@@ -4,8 +4,7 @@ html {
 
 body {
   background-color: palette(brand, darkBlue);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  position: relative;
 }
 
 *, *:before, *:after {
@@ -16,6 +15,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-y: hidden;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .wrapper {
