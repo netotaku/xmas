@@ -6,7 +6,6 @@ $card-padding: 30px;
   &__inner {
     padding-top: 100%;
     background-color: palette(brand, everSoSlightlyLighterBlue);
-    background-color: orange;
     position: relative;
     
     &:before {
@@ -26,5 +25,15 @@ $card-padding: 30px;
     &--half {
       padding-top: 50%;
     }
+  }
+
+  &__day {
+    color: palette(brand, gold);
+    font-size: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Rozha One', serif;
   }
 }

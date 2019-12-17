@@ -5,6 +5,11 @@ html {
 body {
   background-color: palette(brand, darkBlue);
   position: relative;
+
+  &.is-open {
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 *, *:before, *:after {
